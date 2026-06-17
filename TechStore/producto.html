@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Detalle completo de producto con multimedia y tabla tecnica.">
+  <title>TechStore Online | Detalle de Producto</title>
+  <base href="./">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <header>
+    <h1>Detalle de Producto</h1>
+    <nav aria-label="Navegacion principal">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="producto.html" aria-current="page">Detalle</a></li>
+        <li><a href="carrito.html">Carrito</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="acerca.html">Acerca de</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Laptop Gamer Titan X</h2>
+      <p>Potencia extrema para juego y creacion de contenido.</p>
+
+      <picture>
+        <source media="(max-width: 768px)" srcset="img/producto-titan-mobile.jpg">
+        <source media="(min-width: 769px)" srcset="img/producto-titan-desktop.jpg">
+        <img src="img/producto-titan-desktop.jpg" alt="Laptop Gamer Titan X en mesa de trabajo" width="900" height="520">
+      </picture>
+    </section>
+
+    <section>
+      <h2>Video del Producto</h2>
+      <video controls width="900" aria-label="Video de demostracion de la laptop Titan X">
+        <source src="video/demo-titanx.mp4" type="video/mp4">
+        <source src="video/demo-titanx.webm" type="video/webm">
+        Tu navegador no soporta video HTML5.
+      </video>
+    </section>
+
+    <section>
+      <h2>Audio Promocional</h2>
+      <audio controls aria-label="Audio promocional de la laptop Titan X">
+        <source src="audio/promo-titanx.mp3" type="audio/mpeg">
+        <source src="audio/promo-titanx.ogg" type="audio/ogg">
+        Tu navegador no soporta audio HTML5.
+      </audio>
+    </section>
+
+    <section>
+      <h2>Informacion Tecnica</h2>
+      <table>
+        <caption>Especificaciones tecnicas de Titan X</caption>
+        <colgroup>
+          <col span="1">
+          <col span="1">
+        </colgroup>
+        <thead>
+          <tr>
+            <th scope="col">Caracteristica</th>
+            <th scope="col">Valor</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">RAM</th>
+            <td>16 GB DDR5</td>
+          </tr>
+          <tr>
+            <th scope="row">SSD</th>
+            <td>512 GB NVMe</td>
+          </tr>
+          <tr>
+            <th scope="row">GPU</th>
+            <td>RTX Series</td>
+          </tr>
+          <tr>
+            <th scope="row">Pantalla</th>
+            <td>15.6" 165 Hz</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <th scope="row">Garantia</th>
+            <td>24 meses</td>
+          </tr>
+        </tfoot>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <address>TechStore Online - Soporte tecnico y ventas</address>
+    <small>Detalle de producto para practica de HTML5</small>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Catalogo y filtros de productos en TechStore Online.">
+  <title>TechStore Online | Productos</title>
+  <base href="./">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <header>
+    <h1>Catalogo de Productos</h1>
+    <nav aria-label="Navegacion principal">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="productos.html" aria-current="page">Productos</a></li>
+        <li><a href="producto.html">Detalle</a></li>
+        <li><a href="carrito.html">Carrito</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="acerca.html">Acerca de</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="layout">
+    <aside>
+      <h2>Filtros</h2>
+      <form action="productos.html" method="get" aria-label="Filtros de productos">
+        <fieldset>
+          <legend>Rango de Precio</legend>
+          <label for="precio-min">Precio minimo</label>
+          <input id="precio-min" name="precio_min" type="number" min="0" max="5000" step="10" placeholder="Desde 0">
+
+          <label for="precio-max">Precio maximo</label>
+          <input id="precio-max" name="precio_max" type="number" min="50" max="10000" step="10" placeholder="Hasta 10000">
+        </fieldset>
+
+        <fieldset>
+          <legend>Marca</legend>
+          <label for="marca">Marca (con datalist)</label>
+          <input id="marca" name="marca" list="lista-marcas" placeholder="Escribe una marca">
+          <datalist id="lista-marcas">
+            <option value="Apex"></option>
+            <option value="NovaTech"></option>
+            <option value="Pixelon"></option>
+            <option value="GameForge"></option>
+          </datalist>
+        </fieldset>
+
+        <fieldset>
+          <legend>Categoria</legend>
+          <label for="categoria">Selecciona categoria</label>
+          <select id="categoria" name="categoria">
+            <optgroup label="Computo">
+              <option value="laptops">Laptops</option>
+              <option value="accesorios">Accesorios</option>
+            </optgroup>
+            <optgroup label="Movil y entretenimiento">
+              <option value="smartphones">Smartphones</option>
+              <option value="gaming">Gaming</option>
+            </optgroup>
+          </select>
+        </fieldset>
+
+        <fieldset>
+          <legend>Color</legend>
+          <label for="color">Selecciona color base</label>
+          <input id="color" name="color" type="color" value="#222222">
+        </fieldset>
+
+        <button type="submit">Aplicar filtros</button>
+      </form>
+    </aside>
+
+    <section>
+      <h2>Resultados</h2>
+      <article>
+        <h3>Laptop Creator 14</h3>
+        <p>Procesador de 8 nucleos, 16 GB RAM, SSD 1 TB.</p>
+        <p>Precio: <strong>$1299</strong></p>
+      </article>
+      <article>
+        <h3>Smartphone Zoom M8</h3>
+        <p>Camara 108 MP, bateria de larga duracion.</p>
+        <p>Precio: <strong>$699</strong></p>
+      </article>
+      <article>
+        <h3>Combo Gamer RGB</h3>
+        <p>Teclado mecanico + mouse de alta precision.</p>
+        <p>Precio: <strong>$159</strong></p>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <address>TechStore Online - Centro de atencion: +00 555 123 456</address>
+    <small>Practica academica HTML5 - Pagina de productos</small>
+  </footer>
+</body>
+</html>

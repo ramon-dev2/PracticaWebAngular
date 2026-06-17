@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Formulario de contacto completo para TechStore Online.">
+  <title>TechStore Online | Contacto</title>
+  <base href="./">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <header>
+    <h1>Contacto</h1>
+    <nav aria-label="Navegacion principal">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="producto.html">Detalle</a></li>
+        <li><a href="carrito.html">Carrito</a></li>
+        <li><a href="contacto.html" aria-current="page">Contacto</a></li>
+        <li><a href="acerca.html">Acerca de</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Formulario completo</h2>
+      <form action="contacto.html" method="post" autocomplete="on" aria-label="Formulario de contacto y soporte">
+        <input type="hidden" name="origen" value="web-techstore">
+
+        <fieldset>
+          <legend>Datos personales</legend>
+
+          <label for="nombre">Nombre completo</label>
+          <input id="nombre" name="nombre" type="text" required placeholder="Escribe tu nombre" autocomplete="name">
+
+          <label for="correo">Correo electronico</label>
+          <input id="correo" name="correo" type="email" required placeholder="ejemplo@correo.com" autocomplete="email">
+
+          <label for="clave">Contrasena de acceso</label>
+          <input id="clave" name="clave" type="password" required placeholder="Minimo 8 caracteres" pattern=".{8,}" aria-describedby="ayuda-clave">
+          <small id="ayuda-clave">Debe tener al menos 8 caracteres.</small>
+
+          <label for="telefono">Telefono</label>
+          <input id="telefono" name="telefono" type="tel" required placeholder="+00 555 123 456" pattern="[+0-9 ]{8,20}" autocomplete="tel">
+
+          <label for="edad">Edad</label>
+          <input id="edad" name="edad" type="number" min="18" max="90" step="1" required>
+
+          <label for="fecha">Fecha de contacto</label>
+          <input id="fecha" name="fecha" type="date" required>
+
+          <label for="fecha-hora">Fecha y hora de llamada</label>
+          <input id="fecha-hora" name="fecha_hora" type="datetime-local">
+
+          <label for="sitio">Sitio web personal</label>
+          <input id="sitio" name="sitio" type="url" placeholder="https://tusitio.com">
+        </fieldset>
+
+        <fieldset>
+          <legend>Preferencias</legend>
+
+          <label for="color-favorito">Color favorito del producto</label>
+          <input id="color-favorito" name="color_favorito" type="color" value="#0077cc">
+
+          <label for="satisfaccion">Nivel de satisfaccion</label>
+          <input id="satisfaccion" name="satisfaccion" type="range" min="0" max="10" step="1" value="7" aria-describedby="valor-satisfaccion">
+          <output id="valor-satisfaccion" name="valor_satisfaccion">7</output>
+
+          <label for="motivo">Motivo de contacto</label>
+          <select id="motivo" name="motivo" required>
+            <option value="">Selecciona una opcion</option>
+            <option value="soporte">Soporte tecnico</option>
+            <option value="ventas">Consulta de ventas</option>
+            <option value="garantia">Garantia</option>
+          </select>
+
+          <p>Canales preferidos</p>
+          <label for="canal-email">
+            <input id="canal-email" name="canal_email" type="checkbox" value="email"> Email
+          </label>
+          <label for="canal-telefono">
+            <input id="canal-telefono" name="canal_telefono" type="checkbox" value="telefono"> Telefono
+          </label>
+
+          <p>Prioridad del caso</p>
+          <label for="prioridad-normal">
+            <input id="prioridad-normal" name="prioridad" type="radio" value="normal" checked> Normal
+          </label>
+          <label for="prioridad-alta">
+            <input id="prioridad-alta" name="prioridad" type="radio" value="alta"> Alta
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Adjuntos y notas</legend>
+
+          <label for="archivo">Adjuntar archivos</label>
+          <input id="archivo" name="archivo" type="file" multiple>
+
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="6" cols="40" placeholder="Escribe tu consulta" required></textarea>
+
+          <label for="codigo-cliente">Codigo de cliente (solo lectura)</label>
+          <input id="codigo-cliente" name="codigo_cliente" type="text" value="CL-2026-001" readonly>
+
+          <label for="campo-deshabilitado">Campo deshabilitado (demo)</label>
+          <input id="campo-deshabilitado" name="campo_deshabilitado" type="text" value="No editable" disabled>
+        </fieldset>
+
+        <div class="form-actions">
+          <input type="submit" value="Enviar formulario">
+          <input type="reset" value="Limpiar datos">
+          <button type="button">Boton secundario</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <address>TechStore Online - contacto@techstore.test</address>
+    <small>Pagina de contacto con formulario avanzado HTML5</small>
+  </footer>
+</body>
+</html>

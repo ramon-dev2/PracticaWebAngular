@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="TechStore Online: tienda virtual de tecnologia con ofertas en laptops, smartphones y accesorios.">
+  <title>TechStore Online | Inicio</title>
+  <base href="./">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <header>
+    <div class="topbar">
+      <figure class="logo-wrap">
+        <img src="img/logo-techstore.png" alt="Logo de TechStore Online" width="120" height="120">
+        <figcaption>TechStore Online</figcaption>
+      </figure>
+
+      <form action="productos.html" method="get" aria-label="Formulario de busqueda">
+        <label for="busqueda" class="sr-only">Buscar productos</label>
+        <input id="busqueda" name="q" type="search" placeholder="Busca laptops, smartphones o accesorios" aria-describedby="ayuda-busqueda" required>
+        <button type="submit">Buscar</button>
+        <small id="ayuda-busqueda">Ejemplo: laptop gamer</small>
+      </form>
+    </div>
+
+    <nav aria-label="Navegacion principal">
+      <ul>
+        <li><a href="index.html" aria-current="page">Inicio</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="producto.html">Detalle</a></li>
+        <li><a href="carrito.html">Carrito</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="acerca.html">Acerca de</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="banner">
+      <h1>Bienvenido a TechStore Online</h1>
+      <p>Descubre tecnologia de ultima generacion con envio rapido y ofertas semanales.</p>
+      <figure>
+        <img src="img/banner-promocional.jpg" alt="Banner promocional de dispositivos tecnologicos" width="1280" height="520">
+        <figcaption>Semana Tech: hasta <mark>30% OFF</mark> en productos seleccionados.</figcaption>
+      </figure>
+      <p><a class="btn" href="productos.html">Comprar ahora</a></p>
+    </section>
+
+    <section>
+      <h2>Categorias de Productos</h2>
+      <div class="cards">
+        <article>
+          <h3>Laptops</h3>
+          <p>Equipos para estudio, trabajo y alto rendimiento.</p>
+        </article>
+        <article>
+          <h3>Smartphones</h3>
+          <p>Modelos con camaras avanzadas y baterias de larga duracion.</p>
+        </article>
+        <article>
+          <h3>Accesorios</h3>
+          <p>Teclados, mouse, audifonos y mas para tu setup ideal.</p>
+        </article>
+        <article>
+          <h3>Gaming</h3>
+          <p>Consolas, monitores y perifericos para jugar sin limites.</p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>Productos Destacados</h2>
+      <div class="grid-products">
+        <article>
+          <header>
+            <h3>Notebook Pro 15</h3>
+          </header>
+          <img src="img/prod-laptop-1.jpg" alt="Laptop Notebook Pro 15" width="320" height="220">
+          <p>Laptop con procesador de alto rendimiento para productividad.</p>
+          <p>Precio: <strong>$1199</strong> | Oferta: <mark>20% OFF</mark></p>
+          <p>Disponibilidad: <span>En stock</span></p>
+          <footer>
+            <button type="button">Agregar al carrito</button>
+          </footer>
+        </article>
+
+        <article>
+          <header>
+            <h3>Notebook Air 14</h3>
+          </header>
+          <img src="img/prod-laptop-2.jpg" alt="Laptop Notebook Air 14" width="320" height="220">
+          <p>Diseno ligero, pantalla full HD y bateria de 12 horas.</p>
+          <p>Precio: <strong>$899</strong> | Oferta: <mark>10% OFF</mark></p>
+          <p>Disponibilidad: <span>En stock</span></p>
+          <footer>
+            <button type="button">Agregar al carrito</button>
+          </footer>
+        </article>
+
+        <article>
+          <header>
+            <h3>Smartphone X12</h3>
+          </header>
+          <img src="img/prod-phone-1.jpg" alt="Smartphone X12" width="320" height="220">
+          <p>Camara triple, 256 GB y carga rapida.</p>
+          <p>Precio: <strong>$799</strong> | Oferta: <mark>15% OFF</mark></p>
+          <p>Disponibilidad: <span>En stock</span></p>
+          <footer>
+            <button type="button">Agregar al carrito</button>
+          </footer>
+        </article>
+
+        <article>
+          <header>
+            <h3>Smartphone Lite 9</h3>
+          </header>
+          <img src="img/prod-phone-2.jpg" alt="Smartphone Lite 9" width="320" height="220">
+          <p>Excelente relacion calidad-precio para uso diario.</p>
+          <p>Precio: <strong>$499</strong> | Oferta: <mark>12% OFF</mark></p>
+          <p>Disponibilidad: <span>En stock</span></p>
+          <footer>
+            <button type="button">Agregar al carrito</button>
+          </footer>
+        </article>
+
+        <article>
+          <header>
+            <h3>Headset RGB</h3>
+          </header>
+          <img src="img/prod-accesorio-1.jpg" alt="Audifonos Headset RGB" width="320" height="220">
+          <p>Sonido envolvente y microfono con cancelacion de ruido.</p>
+          <p>Precio: <strong>$129</strong> | Oferta: <mark>25% OFF</mark></p>
+          <p>Disponibilidad: <span>Ultimas unidades</span></p>
+          <footer>
+            <button type="button">Agregar al carrito</button>
+          </footer>
+        </article>
+
+        <article>
+          <header>
+            <h3>Mouse Ultra DPI</h3>
+          </header>
+          <img src="img/prod-accesorio-2.jpg" alt="Mouse gamer Ultra DPI" width="320" height="220">
+          <p>Sensor optico preciso de hasta 16000 DPI.</p>
+          <p>Precio: <strong>$79</strong> | Oferta: <mark>18% OFF</mark></p>
+          <p>Disponibilidad: <span>En stock</span></p>
+          <footer>
+            <button type="button">Agregar al carrito</button>
+          </footer>
+        </article>
+
+        <article>
+          <header>
+            <h3>Consola ZX</h3>
+          </header>
+          <img src="img/prod-gaming-1.jpg" alt="Consola de videojuegos ZX" width="320" height="220">
+          <p>Consola de nueva generacion con trazado de rayos.</p>
+          <p>Precio: <strong>$699</strong> | Oferta: <mark>8% OFF</mark></p>
+          <p>Disponibilidad: <span>En stock</span></p>
+          <footer>
+            <button type="button">Agregar al carrito</button>
+          </footer>
+        </article>
+
+        <article>
+          <header>
+            <h3>Monitor 27 Gaming</h3>
+          </header>
+          <img src="img/prod-gaming-2.jpg" alt="Monitor gamer de 27 pulgadas" width="320" height="220">
+          <p>Panel 165 Hz para una experiencia de juego fluida.</p>
+          <p>Precio: <strong>$349</strong> | Oferta: <mark>14% OFF</mark></p>
+          <p>Disponibilidad: <span>En stock</span></p>
+          <footer>
+            <button type="button">Agregar al carrito</button>
+          </footer>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>Laboratorio HTML5</h2>
+      <article>
+        <h3>Etiquetas menos comunes</h3>
+        <p><data value="SKU-1001">Laptop Gamer Titan</data> con nombre fonetico: 
+          <ruby>TechStore<rp>(</rp><rt>tek-stor</rt><rp>)</rp></ruby>.</p>
+        <p>Compatibilidad de idioma con <bdi>Usuario-AR</bdi> y direccion de texto con <bdo dir="rtl">Texto invertido</bdo>.</p>
+        <p>Palabra con corte sugerido: micro<wbr>procesador.</p>
+      </article>
+
+      <article>
+        <h3>Texto y semantica avanzada</h3>
+        <p><em>Oferta limitada</em> para estudiantes. Precio anterior <del>$1399</del> precio actual <ins>$1199</ins>.</p>
+        <p>Potencia de CPU: 3.8 x 10<sup>9</sup> Hz. Formula de bateria Li<sub>2</sub>.</p>
+        <p>Atajo para buscar: presiona <kbd>Ctrl</kbd> + <kbd>K</kbd>.</p>
+        <pre><code>npm install techstore-cli</code></pre>
+        <p>Salida esperada: <samp>Install complete</samp>. Variable principal: <var>totalCompra</var>.</p>
+        <p>Definicion: <dfn>Hardware</dfn> es el conjunto de componentes fisicos.</p>
+        <p>Cita corta: <q>La tecnologia bien aplicada mejora vidas.</q></p>
+        <blockquote cite="https://www.w3.org/TR/html52/">
+          HTML5 permite estructurar contenido semantico para la web moderna.
+        </blockquote>
+        <p>Referencia: <cite>W3C HTML Specification</cite>.</p>
+      </article>
+
+      <article>
+        <h3>Agrupacion, listas y recursos</h3>
+        <div class="lab-box">
+          <p>Lista no ordenada:</p>
+          <ul>
+            <li>Garantia oficial</li>
+            <li>Envio nacional</li>
+            <li>Soporte 24/7</li>
+          </ul>
+          <p>Lista ordenada:</p>
+          <ol>
+            <li>Selecciona producto</li>
+            <li>Agrega al carrito</li>
+            <li>Completa pago</li>
+          </ol>
+          <p>Lista de definiciones:</p>
+          <dl>
+            <dt>SSD</dt>
+            <dd>Unidad de estado solido de alta velocidad.</dd>
+            <dt>RAM</dt>
+            <dd>Memoria temporal para procesos activos.</dd>
+          </dl>
+        </div>
+        <hr>
+        <p>Linea de salto<br>para ejemplo con br.</p>
+      </article>
+
+      <article>
+        <h3>Recursos interactivos y embebidos</h3>
+        <details>
+          <summary>Ver politicas de envio</summary>
+          <p>Entregas en 24 a 72 horas habiles segun ciudad.</p>
+        </details>
+
+        <!-- <dialog open aria-label="Dialogo de aviso">
+          Catalogo de demostracion para practica academica HTML5.
+        </dialog> -->
+
+        <svg width="220" height="80" role="img" aria-label="Logo vectorial de TechStore">
+          <rect x="2" y="2" width="216" height="76" rx="10"></rect>
+          <text x="20" y="48">TechStore</text>
+        </svg>
+
+        <canvas width="220" height="80">Tu navegador no soporta canvas.</canvas>
+
+        <!-- <iframe title="Mapa de referencia de tienda" src="https://www.openstreetmap.org/export/embed.html" loading="lazy"></iframe> -->
+
+        <embed src="img/ficha-tecnica.pdf" type="application/pdf">
+        <object data="img/manual-producto.pdf" type="application/pdf" width="320" height="220">
+          Manual del producto en PDF.
+        </object>
+
+        <template>
+          <p>Plantilla HTML5 para futuras tarjetas de producto.</p>
+        </template>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <address>
+      TechStore Online, Av. Innovacion 404, Ciudad Digital<br>
+      Email: soporte@techstore.test | Tel: +00 555 123 456
+    </address>
+    <small>&copy; <time datetime="2026">2026</time> TechStore Online. Todos los derechos reservados.</small>
+  </footer>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Store",
+      "name": "TechStore Online"
+    }
+  </script>
+  <noscript>Activa JavaScript si deseas funciones avanzadas en futuras versiones.</noscript>
+</body>
+</html>

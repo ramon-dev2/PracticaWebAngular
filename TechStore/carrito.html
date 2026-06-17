@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Carrito de compras con totales y progreso de pedido.">
+  <title>TechStore Online | Carrito</title>
+  <base href="./">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <header>
+    <h1>Carrito de Compras</h1>
+    <nav aria-label="Navegacion principal">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="producto.html">Detalle</a></li>
+        <li><a href="carrito.html" aria-current="page">Carrito</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="acerca.html">Acerca de</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Productos agregados</h2>
+      <table>
+        <caption>Resumen del carrito actual</caption>
+        <colgroup>
+          <col span="1">
+          <col span="1">
+          <col span="1">
+          <col span="1">
+        </colgroup>
+        <thead>
+          <tr>
+            <th scope="col">Producto</th>
+            <th scope="col">Precio Unitario</th>
+            <th scope="col">Cantidad</th>
+            <th scope="col">Subtotal</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Notebook Pro 15</td>
+            <td>$1199</td>
+            <td>1</td>
+            <td>$1199</td>
+          </tr>
+          <tr>
+            <td>Headset RGB</td>
+            <td>$129</td>
+            <td>2</td>
+            <td>$258</td>
+          </tr>
+          <tr>
+            <td>Mouse Ultra DPI</td>
+            <td>$79</td>
+            <td>1</td>
+            <td>$79</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <th scope="row" colspan="3">Total de compra</th>
+            <td><strong>$1536</strong></td>
+          </tr>
+        </tfoot>
+      </table>
+    </section>
+
+    <section>
+      <h2>Indicadores del pedido</h2>
+      <p>Descuento aplicado: <meter value="75" min="0" max="100">75%</meter></p>
+      <p>Progreso del pedido: <progress value="3" max="10">3 de 10</progress></p>
+    </section>
+  </main>
+
+  <footer>
+    <address>TechStore Online - Carrito y pagos seguros</address>
+    <small>Practica HTML5 - Simulacion de proceso de compra</small>
+  </footer>
+</body>
+</html>
