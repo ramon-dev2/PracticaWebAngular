@@ -2,3 +2,5 @@
 .codex/
 node_modules/
 .angular/cache/20.3.30/techstore-angular
+.angular/
+.angular/cache/
