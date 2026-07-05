@@ -1,4 +1,4 @@
-import { AsyncPipe, CurrencyPipe, NgFor, NgIf } from '@angular/common';
+import { AsyncPipe, CurrencyPipe, NgIf } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { RouterLink } from '@angular/router';
@@ -10,7 +10,7 @@ import { CarritoService } from '../../services/carrito.service';
 @Component({
   selector: 'app-checkout',
   standalone: true,
-  imports: [AsyncPipe, CurrencyPipe, NgFor, NgIf, ReactiveFormsModule, RouterLink],
+  imports: [AsyncPipe, CurrencyPipe, NgIf, ReactiveFormsModule, RouterLink],
   template: `
     <main class="layout">
       <section>

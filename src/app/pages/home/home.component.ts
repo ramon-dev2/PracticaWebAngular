@@ -16,7 +16,7 @@ import { ProductoService } from '../../services/producto.service';
       <section class="hero-grid" aria-labelledby="hero-title">
         <article class="hero-card">
           <div class="hero-copy">
-            <p class="eyebrow">Nuevo</p>
+            <p class="white">Nuevo</p>
             <h1 id="hero-title">Auriculares Inalambricos <span>SoundPro X1</span></h1>
             <p>Sonido premium, cancelacion de ruido y hasta 30 horas de bateria.</p>
             <a class="btn" routerLink="/producto/sony-wh-ch720n">Comprar ahora</a>

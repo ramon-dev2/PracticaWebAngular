@@ -13,7 +13,7 @@ import { DescuentoPipe } from '../../pipes/descuento.pipe';
       <a [routerLink]="['/producto', producto.id]">
         <img [src]="producto.imagen" [alt]="producto.nombre" width="320" height="220">
       </a>
-      <p class="eyebrow">{{ producto.marca | uppercase }}</p>
+      <p class="white">{{ producto.marca | uppercase }}</p>
       <h3><a [routerLink]="['/producto', producto.id]">{{ producto.nombre }}</a></h3>
       <p>{{ producto.descripcion }}</p>
       <p class="price">{{ producto.precio | descuento:10 | currency:'COP':'symbol-narrow':'1.0-0':'es-CO' }}</p>

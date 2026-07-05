@@ -23,7 +23,7 @@ import { SearchBarComponent } from '../search-bar/search-bar.component';
       <div class="header-main">
         <a class="brand" routerLink="/" aria-label="TechStore inicio">
           <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
-          <span>Tech<span>Store</span></span>
+          <span >Tech Store</span>
         </a>
         <app-search-bar />
         <div class="header-actions" aria-label="Acciones de compra">

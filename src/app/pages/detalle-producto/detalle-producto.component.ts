@@ -15,7 +15,7 @@ import { ProductoService } from '../../services/producto.service';
       <section class="product-detail" *ngIf="producto$ | async as producto; else noEncontrado">
         <img [src]="producto.imagen" [alt]="producto.nombre">
         <article>
-          <p class="eyebrow">{{ producto.categoria }}</p>
+          <p class="white">{{ producto.categoria }}</p>
           <h1>{{ producto.nombre }}</h1>
           <p>{{ producto.descripcion }}</p>
           <p class="price">{{ producto.precio | currency:'COP':'symbol-narrow':'1.0-0':'es-CO' }}</p>
