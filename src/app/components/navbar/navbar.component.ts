@@ -9,7 +9,8 @@ import { SearchBarComponent } from '../search-bar/search-bar.component';
   selector: 'app-navbar',
   standalone: true,
   imports: [AsyncPipe, RouterLink, RouterLinkActive, SearchBarComponent],
-  templateUrl: './navbar.component.html'
+  templateUrl: './navbar.component.html',
+  styleUrl: './navbar.component.css'
 })
 export class NavbarComponent {
   protected readonly carrito = inject(CarritoService);

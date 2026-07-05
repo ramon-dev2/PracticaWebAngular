@@ -9,7 +9,8 @@ import { CarritoService } from '../../services/carrito.service';
   selector: 'app-carrito',
   standalone: true,
   imports: [AsyncPipe, CurrencyPipe, FormsModule, NgFor, NgIf, RouterLink],
-  templateUrl: './carrito.component.html'
+  templateUrl: './carrito.component.html',
+  styleUrl: './carrito.component.css'
 })
 export class CarritoComponent {
   protected readonly carrito = inject(CarritoService);

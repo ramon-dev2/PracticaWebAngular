@@ -12,7 +12,8 @@ import { FacturaEmailService } from '../../services/factura-email.service';
   selector: 'app-checkout',
   standalone: true,
   imports: [AsyncPipe, CurrencyPipe, NgIf, ReactiveFormsModule, RouterLink],
-  templateUrl: './checkout.component.html'
+  templateUrl: './checkout.component.html',
+  styleUrl: './checkout.component.css'
 })
 export class CheckoutComponent {
   private readonly fb = inject(FormBuilder);

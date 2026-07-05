@@ -6,7 +6,8 @@ import { Router } from '@angular/router';
   selector: 'app-search-bar',
   standalone: true,
   imports: [FormsModule],
-  templateUrl: './search-bar.component.html'
+  templateUrl: './search-bar.component.html',
+  styleUrl: './search-bar.component.css'
 })
 export class SearchBarComponent {
   private readonly router = inject(Router);

@@ -13,7 +13,8 @@ import { ProductoService } from '../../services/producto.service';
   selector: 'app-productos',
   standalone: true,
   imports: [AsyncPipe, CategoryMenuComponent, FormsModule, NgFor, NgIf, NgSwitch, NgSwitchCase, NgSwitchDefault, ProductCardComponent],
-  templateUrl: './productos.component.html'
+  templateUrl: './productos.component.html',
+  styleUrl: './productos.component.css'
 })
 export class ProductosComponent implements OnInit {
   private readonly productoService = inject(ProductoService);

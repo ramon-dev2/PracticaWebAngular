@@ -1,0 +1,24 @@
+.product-detail {
+	display: grid;
+	grid-template-columns: minmax(260px, 520px) 1fr;
+	gap: 2rem;
+	align-items: center;
+}
+
+.product-detail img {
+	border-radius: var(--radius);
+	box-shadow: var(--shadow);
+	background: #fff;
+}
+
+.price {
+	margin: 0;
+	font-size: 1.15rem;
+	font-weight: 700;
+}
+
+@media (max-width: 860px) {
+	.product-detail {
+		grid-template-columns: 1fr;
+	}
+}

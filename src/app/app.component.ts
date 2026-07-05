@@ -8,7 +8,8 @@ import { ThemeService } from './services/theme.service';
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet, NavbarComponent, FooterComponent],
-  templateUrl: './app.component.html'
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.css'
 })
 export class AppComponent {
   private readonly theme = inject(ThemeService);

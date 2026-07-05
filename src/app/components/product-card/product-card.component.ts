@@ -8,7 +8,8 @@ import { DescuentoPipe } from '../../pipes/descuento.pipe';
   selector: 'app-product-card',
   standalone: true,
   imports: [CurrencyPipe, DescuentoPipe, NgClass, NgStyle, RouterLink, UpperCasePipe],
-  templateUrl: './product-card.component.html'
+  templateUrl: './product-card.component.html',
+  styleUrl: './product-card.component.css'
 })
 export class ProductCardComponent {
   @Input({ required: true }) producto!: Producto;

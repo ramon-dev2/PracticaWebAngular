@@ -1,0 +1,11 @@
+.grid-products {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+	gap: 1rem;
+}
+
+.result-count {
+	margin: 0 0 0.8rem;
+	color: var(--muted);
+	font-weight: 700;
+}

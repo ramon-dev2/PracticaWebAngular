@@ -7,7 +7,8 @@ import { AuthService } from '../../services/auth.service';
   selector: 'app-contacto',
   standalone: true,
   imports: [NgIf, ReactiveFormsModule],
-  templateUrl: './contacto.component.html'
+  templateUrl: './contacto.component.html',
+  styleUrl: './contacto.component.css'
 })
 export class ContactoComponent {
   private readonly fb = inject(FormBuilder);

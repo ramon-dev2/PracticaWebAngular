@@ -10,7 +10,8 @@ import { ProductoService } from '../../services/producto.service';
   selector: 'app-detalle-producto',
   standalone: true,
   imports: [AsyncPipe, CurrencyPipe, DatePipe, NgIf, RouterLink],
-  templateUrl: './detalle-producto.component.html'
+  templateUrl: './detalle-producto.component.html',
+  styleUrl: './detalle-producto.component.css'
 })
 export class DetalleProductoComponent {
   private readonly route = inject(ActivatedRoute);

@@ -11,7 +11,8 @@ import { ProductoService } from '../../services/producto.service';
   selector: 'app-home',
   standalone: true,
   imports: [AsyncPipe, CurrencyPipe, NgFor, NgIf, ProductCardComponent, RouterLink],
-  templateUrl: './home.component.html'
+  templateUrl: './home.component.html',
+  styleUrl: './home.component.css'
 })
 export class HomeComponent {
   private readonly productos = inject(ProductoService);

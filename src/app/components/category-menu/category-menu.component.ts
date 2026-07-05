@@ -5,7 +5,8 @@ import { Component, EventEmitter, Output } from '@angular/core';
   selector: 'app-category-menu',
   standalone: true,
   imports: [NgFor],
-  templateUrl: './category-menu.component.html'
+  templateUrl: './category-menu.component.html',
+  styleUrl: './category-menu.component.css'
 })
 export class CategoryMenuComponent {
   @Output() readonly seleccion = new EventEmitter<string>();
