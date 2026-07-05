@@ -57,11 +57,19 @@ export class CheckoutComponent {
           items,
           ...resumen
         };
-        const factura = this.facturaEmail.enviarFactura(orden);
         localStorage.setItem('techstore-last-order', JSON.stringify(orden));
         localStorage.setItem('techstore-order-history', JSON.stringify([orden]));
         this.carrito.vaciar();
-        this.mensaje = `Orden ${orden.id} generada correctamente. Factura enviada a ${factura.destinatario}.`;
+        this.mensaje = `Orden ${orden.id} generada correctamente. Enviando factura...`;
+
+        this.facturaEmail.enviarFactura(orden).subscribe({
+          next: (factura) => {
+            this.mensaje = `Orden ${orden.id} generada correctamente. Factura enviada a ${factura.destinatario}.`;
+          },
+          error: () => {
+            this.mensaje = `Orden ${orden.id} generada correctamente, pero no fue posible enviar la factura por correo.`;
+          }
+        });
       });
   }
 }
