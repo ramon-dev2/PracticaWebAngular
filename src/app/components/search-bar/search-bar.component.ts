@@ -6,13 +6,7 @@ import { Router } from '@angular/router';
   selector: 'app-search-bar',
   standalone: true,
   imports: [FormsModule],
-  template: `
-    <form class="search-form" role="search" (ngSubmit)="buscar()">
-      <label for="busqueda" class="sr-only">Buscar productos</label>
-      <input id="busqueda" name="busqueda" type="search" placeholder="Buscar productos..." [(ngModel)]="busqueda">
-      <button type="submit">Buscar</button>
-    </form>
-  `
+  templateUrl: './search-bar.component.html'
 })
 export class SearchBarComponent {
   private readonly router = inject(Router);

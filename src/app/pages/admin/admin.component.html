@@ -1,0 +1,42 @@
+<main class="layout">
+  <section>
+    <h1>Panel administrativo</h1>
+    <form [formGroup]="form" (ngSubmit)="guardar()">
+      <label for="nombre">Producto</label>
+      <input id="nombre" formControlName="nombre">
+      <label for="precio">Precio</label>
+      <input id="precio" type="number" formControlName="precio">
+      <label for="stock">Inventario</label>
+      <input id="stock" type="number" formControlName="stock">
+      <label for="categoria">Categoria</label>
+      <select id="categoria" formControlName="categoria">
+        <option value="smartphones">Smartphones</option>
+        <option value="laptops">Laptops</option>
+        <option value="accesorios">Accesorios</option>
+        <option value="gaming">Gaming</option>
+        <option value="hogar">Hogar inteligente</option>
+      </select>
+      <button type="submit">Guardar producto</button>
+    </form>
+  </section>
+
+  <section>
+    <h2>Inventario</h2>
+    <table>
+      <thead>
+        <tr><th>Producto</th><th>Precio</th><th>Stock</th><th>Accion</th></tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let producto of productos$ | async">
+          <td>{{ producto.nombre }}</td>
+          <td>{{ producto.precio | currency:'COP':'symbol-narrow':'1.0-0':'es-CO' }}</td>
+          <td>{{ producto.stock }}</td>
+          <td>
+            <button type="button" class="button-ghost" (click)="editar(producto)">Editar</button>
+            <button type="button" class="button-ghost" (click)="productoService.eliminar(producto.id)">Eliminar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</main>

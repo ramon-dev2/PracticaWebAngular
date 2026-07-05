@@ -1,0 +1,33 @@
+<footer class="site-footer">
+  <div>
+    <h2>TechStore</h2>
+    <p>Tu tienda online de tecnologia favorita.</p>
+    <p class="social-links">
+      <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+      <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+      <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
+    </p>
+  </div>
+  <div>
+    <h3>Informacion</h3>
+    <a routerLink="/contacto">Sobre nosotros</a>
+    <a routerLink="/contacto">Terminos y condiciones</a>
+    <a routerLink="/contacto">Politica de privacidad</a>
+  </div>
+  <div>
+    <h3>Ayuda</h3>
+    <a routerLink="/contacto">Centro de ayuda</a>
+    <a routerLink="/contacto">Metodos de pago</a>
+    <a routerLink="/contacto">Envios y entregas</a>
+  </div>
+  <div>
+    <h3>Newsletter</h3>
+    <form (ngSubmit)="suscribir()">
+      <label class="sr-only" for="newsletter">Tu correo electronico</label>
+      <input id="newsletter" name="email" type="email" placeholder="Tu correo electronico" [(ngModel)]="email">
+      <button type="submit">Suscribirme</button>
+    </form>
+    <p class="app-message success" *ngIf="mensaje">{{ mensaje }}</p>
+  </div>
+  <small>&copy; 2026 TechStore. Todos los derechos reservados.</small>
+</footer>

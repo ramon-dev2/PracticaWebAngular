@@ -1,0 +1,33 @@
+<main class="layout">
+  <section>
+    <h1>Checkout</h1>
+    <form [formGroup]="form" (ngSubmit)="generarOrden()">
+      <label for="nombre">Nombre</label>
+      <input id="nombre" formControlName="nombre">
+      <p class="app-message error" *ngIf="campoInvalido('nombre')">El nombre es obligatorio.</p>
+
+      <label for="email">Email</label>
+      <input id="email" type="email" formControlName="email">
+      <p class="app-message error" *ngIf="campoInvalido('email')">Ingresa un email valido.</p>
+
+      <label for="direccion">Direccion</label>
+      <input id="direccion" formControlName="direccion">
+      <p class="app-message error" *ngIf="campoInvalido('direccion')">La direccion debe tener al menos 8 caracteres.</p>
+
+      <label for="tarjeta">Tarjeta</label>
+      <input id="tarjeta" formControlName="tarjeta" inputmode="numeric" placeholder="0000000000000000">
+      <p class="app-message error" *ngIf="campoInvalido('tarjeta')">La tarjeta debe tener 16 digitos.</p>
+
+      <button type="submit">Generar orden</button>
+    </form>
+    <p class="app-message success" *ngIf="mensaje">{{ mensaje }}</p>
+  </section>
+
+  <aside *ngIf="resumen$ | async as resumen">
+    <h2>Resumen de compra</h2>
+    <p>Subtotal: {{ resumen.subtotal | currency:'COP':'symbol-narrow':'1.0-0':'es-CO' }}</p>
+    <p>Impuestos: {{ resumen.impuestos | currency:'COP':'symbol-narrow':'1.0-0':'es-CO' }}</p>
+    <p><strong>Total: {{ resumen.total | currency:'COP':'symbol-narrow':'1.0-0':'es-CO' }}</strong></p>
+    <a routerLink="/carrito">Editar carrito</a>
+  </aside>
+</main>

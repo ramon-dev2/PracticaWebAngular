@@ -8,21 +8,7 @@ import { DescuentoPipe } from '../../pipes/descuento.pipe';
   selector: 'app-product-card',
   standalone: true,
   imports: [CurrencyPipe, DescuentoPipe, NgClass, NgStyle, RouterLink, UpperCasePipe],
-  template: `
-    <article [ngClass]="{ 'low-stock': producto.stock <= 5 }" [ngStyle]="{ borderColor: producto.destacado ? '#d7e7ff' : '#e3e8ef' }">
-      <a [routerLink]="['/producto', producto.id]">
-        <img [src]="producto.imagen" [alt]="producto.nombre" width="320" height="220">
-      </a>
-      <p class="white">{{ producto.marca | uppercase }}</p>
-      <h3><a [routerLink]="['/producto', producto.id]">{{ producto.nombre }}</a></h3>
-      <p>{{ producto.descripcion }}</p>
-      <p class="price">{{ producto.precio | descuento:10 | currency:'COP':'symbol-narrow':'1.0-0':'es-CO' }}</p>
-      <p class="rating" [attr.aria-label]="'Calificacion ' + producto.rating + ' de 5'">
-        {{ estrellas }} <span>({{ producto.reviews }})</span>
-      </p>
-      <button type="button" (click)="agregado.emit(producto)">Agregar al carrito</button>
-    </article>
-  `
+  templateUrl: './product-card.component.html'
 })
 export class ProductCardComponent {
   @Input({ required: true }) producto!: Producto;

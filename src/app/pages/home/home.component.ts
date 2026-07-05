@@ -11,55 +11,7 @@ import { ProductoService } from '../../services/producto.service';
   selector: 'app-home',
   standalone: true,
   imports: [AsyncPipe, CurrencyPipe, NgFor, NgIf, ProductCardComponent, RouterLink],
-  template: `
-    <main>
-      <section class="hero-grid" aria-labelledby="hero-title">
-        <article class="hero-card">
-          <div class="hero-copy">
-            <p class="white">Nuevo</p>
-            <h1 id="hero-title">Auriculares Inalambricos <span>SoundPro X1</span></h1>
-            <p>Sonido premium, cancelacion de ruido y hasta 30 horas de bateria.</p>
-            <a class="btn" routerLink="/producto/sony-wh-ch720n">Comprar ahora</a>
-          </div>
-          <img src="assets/img/prod-accesorio-1.jpg" alt="Auriculares inalambricos SoundPro X1" width="320" height="220">
-        </article>
-
-        <aside class="service-panel" aria-label="Beneficios de compra">
-          <article><i class="fa-solid fa-truck-fast"></i><strong>Envios rapidos</strong><span>A todo el pais</span></article>
-          <article><i class="fa-solid fa-shield-halved"></i><strong>Garantia oficial</strong><span>Hasta 12 meses</span></article>
-          <article><i class="fa-regular fa-credit-card"></i><strong>Pagos seguros</strong><span>Tarjetas y mas</span></article>
-          <article><i class="fa-solid fa-headset"></i><strong>Atencion al cliente</strong><span>Soporte 24/7</span></article>
-        </aside>
-      </section>
-
-      <section class="section-head">
-        <h2>Categorias destacadas</h2>
-        <a routerLink="/productos">Ver todas las categorias</a>
-      </section>
-
-      <section class="category-grid" aria-label="Categorias destacadas">
-        <a routerLink="/productos" [queryParams]="{ categoria: 'smartphones' }"><img src="assets/img/prod-phone-1.jpg" alt=""><span>Celulares</span></a>
-        <a routerLink="/productos" [queryParams]="{ categoria: 'laptops' }"><img src="assets/img/prod-laptop-1.jpg" alt=""><span>Computadoras</span></a>
-        <a routerLink="/productos" [queryParams]="{ categoria: 'accesorios' }"><img src="assets/img/prod-accesorio-1.jpg" alt=""><span>Audio</span></a>
-        <a routerLink="/productos" [queryParams]="{ categoria: 'gaming' }"><img src="assets/img/prod-gaming-1.jpg" alt=""><span>Gaming</span></a>
-      </section>
-
-      <section class="section-head"><h2>Productos destacados</h2></section>
-      <section class="grid-products featured-products" aria-label="Productos destacados">
-        <app-product-card *ngFor="let producto of destacados$ | async" [producto]="producto" (agregado)="agregar($event)" />
-      </section>
-
-      <section class="section-head"><h2>Recomendaciones externas</h2></section>
-      <section class="grid-products api-products" aria-label="Productos cargados desde API REST">
-        <article class="api-card" *ngFor="let item of recomendaciones$ | async">
-          <img [src]="item.image" [alt]="item.title" loading="lazy">
-          <h3>{{ item.title }}</h3>
-          <p>{{ item.price * 4000 | currency:'COP':'symbol-narrow':'1.0-0':'es-CO' }}</p>
-        </article>
-        <p class="empty-state" *ngIf="(recomendaciones$ | async)?.length === 0">No fue posible cargar recomendaciones externas.</p>
-      </section>
-    </main>
-  `
+  templateUrl: './home.component.html'
 })
 export class HomeComponent {
   private readonly productos = inject(ProductoService);

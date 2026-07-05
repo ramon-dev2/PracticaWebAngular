@@ -8,13 +8,7 @@ import { ThemeService } from './services/theme.service';
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet, NavbarComponent, FooterComponent],
-  template: `
-    <div [class.dark-theme]="isDark()">
-      <app-navbar />
-      <router-outlet />
-      <app-footer />
-    </div>
-  `
+  templateUrl: './app.component.html'
 })
 export class AppComponent {
   private readonly theme = inject(ThemeService);
