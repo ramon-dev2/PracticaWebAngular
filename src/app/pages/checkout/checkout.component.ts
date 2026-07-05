@@ -6,6 +6,7 @@ import { combineLatest, map, take } from 'rxjs';
 import { Orden } from '../../models/orden';
 import { AuthService } from '../../services/auth.service';
 import { CarritoService } from '../../services/carrito.service';
+import { FacturaEmailService } from '../../services/factura-email.service';
 
 @Component({
   selector: 'app-checkout',
@@ -51,6 +52,7 @@ export class CheckoutComponent {
   private readonly fb = inject(FormBuilder);
   private readonly carrito = inject(CarritoService);
   private readonly auth = inject(AuthService);
+  private readonly facturaEmail = inject(FacturaEmailService);
   mensaje = '';
 
   readonly form = this.fb.nonNullable.group({
@@ -88,10 +90,11 @@ export class CheckoutComponent {
           items,
           ...resumen
         };
+        const factura = this.facturaEmail.enviarFactura(orden);
         localStorage.setItem('techstore-last-order', JSON.stringify(orden));
         localStorage.setItem('techstore-order-history', JSON.stringify([orden]));
         this.carrito.vaciar();
-        this.mensaje = `Orden ${orden.id} generada correctamente.`;
+        this.mensaje = `Orden ${orden.id} generada correctamente. Factura enviada a ${factura.destinatario}.`;
       });
   }
 }
