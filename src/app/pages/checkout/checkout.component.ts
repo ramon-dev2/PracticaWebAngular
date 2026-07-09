@@ -1,4 +1,5 @@
 import { AsyncPipe, CurrencyPipe, NgIf } from '@angular/common';
+import { HttpErrorResponse } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { RouterLink } from '@angular/router';
@@ -66,8 +67,12 @@ export class CheckoutComponent {
           next: (factura) => {
             this.mensaje = `Orden ${orden.id} generada correctamente. Factura enviada a ${factura.destinatario}.`;
           },
-          error: () => {
-            this.mensaje = `Orden ${orden.id} generada correctamente, pero no fue posible enviar la factura por correo.`;
+          error: (error: unknown) => {
+            const detalle =
+              error instanceof HttpErrorResponse && error.error?.message
+                ? ` Detalle: ${error.error.message}`
+                : '';
+            this.mensaje = `Orden ${orden.id} generada correctamente, pero no fue posible enviar la factura por correo.${detalle}`;
           }
         });
       });

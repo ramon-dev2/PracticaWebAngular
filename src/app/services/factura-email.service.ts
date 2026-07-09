@@ -11,13 +11,14 @@ export interface FacturaEmail {
 }
 
 const STORAGE_KEY = 'techstore-sent-invoices';
+const API_URL = 'http://localhost:3000/api/enviar-factura';
 
 @Injectable({ providedIn: 'root' })
 export class FacturaEmailService {
   constructor(private readonly http: HttpClient) {}
 
   enviarFactura(orden: Orden): Observable<FacturaEmail> {
-    return this.http.post<FacturaEmail>('/api/enviar-factura', { orden }).pipe(
+    return this.http.post<FacturaEmail>(API_URL, { orden }).pipe(
       tap((email) => {
         const enviados = this.cargarEnviados();
         localStorage.setItem(STORAGE_KEY, JSON.stringify([email, ...enviados]));
